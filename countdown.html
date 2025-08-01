@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chasunah Countdown</title>
+
+    <!--Font connections-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Chango&family=Delius&display=swap"
+        rel="stylesheet">
+
+    <!--Icon images-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            text-align: center;
+            height: 100%;
+            margin: 0;
+            /*background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;*/
+
+        }
+
+        .bkImg {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(images/Illustration5.jpg);
+            height: 100%;
+        }
+
+        .numDays {
+            color: rgb(177, 115, 177);
+            font-family: "Delius", cursive;
+            font-weight: 400;
+            font-style: normal;
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #days {
+            font-family: "Chango", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16em;
+            color: #0cc9b6;
+        }
+
+        .hardDate {
+            font-family: "Ballet", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 6em;
+            color: rgb(26, 98, 154);
+        }
+
+        .hr {
+            margin: 0 20px;
+            border: rgb(194 181 166) solid 2px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bkImg">
+        <div class="numDays">
+            Number of Days Until
+        </div>
+        <div id="hardcoded-date" class="hardDate"></div>
+        <hr class="hr">
+        <div id="days"></div>
+    </div>
+
+
+    <script>
+        // ---- HARD CODE YOUR DATE HERE (year, monthIndex [0-based], day) ----
+        const hardcodedDate = new Date(2025, 11, 22); // December is 11
+
+        // Display the hardcoded date
+        document.getElementById('hardcoded-date').textContent = hardcodedDate.toDateString();
+
+        function updateDays() {
+            const now = new Date();
+            // Zero out the time part for accurate day diff
+            now.setHours(0, 0, 0, 0);
+            hardcodedDate.setHours(0, 0, 0, 0);
+
+            // Calculate the difference in milliseconds
+            const diffMs = hardcodedDate - now;
+            // Convert milliseconds to days
+            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            document.getElementById('days').textContent = diffDays;
+        }
+
+        updateDays();
+    </script>
+</body>
+
+</html>
