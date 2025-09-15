@@ -6,10 +6,6 @@ body {
     text-align: center;
     height: 100%;
     margin: 0;
-    /*background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;*/
-
 }
 
 .bkImg {
@@ -39,7 +35,7 @@ body {
     font-family: "Chango", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 9em;
+    font-size: 8em;
     color: #0cc9b6;
 }
 
@@ -67,12 +63,21 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
+    grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
     border-collapse: collapse;
 }
 
 .holder {
     padding-top: 2.75em;
     padding-bottom: 2.75em;
+}
+.colon{
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5em;
+    color: #0cc9b6;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    
 }
