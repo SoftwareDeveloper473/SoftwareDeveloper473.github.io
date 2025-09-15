@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    /*background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;*/
+
+}
+
+.bkImg {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/Illustration5.jpg);
+    height: 100%;
+}
+
+.numDays {
+    color: rgb(177, 115, 177);
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#days,
+#weeks,
+#hours,
+#mins,
+#secs {
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9em;
+    color: #0cc9b6;
+}
+
+#title {
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    color: #0cc9b6;
+}
+
+.hardDate {
+    font-family: "Ballet", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7em;
+    color: rgb(26, 98, 154);
+}
+
+.hr {
+    margin: 0 20px;
+    border: rgb(194 181 166) solid 2px;
+    border-radius: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    border-collapse: collapse;
+}
+
+.holder {
+    padding-top: 2.75em;
+    padding-bottom: 2.75em;
+}
